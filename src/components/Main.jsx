@@ -8,6 +8,11 @@ const Main = () => {
 
     const [number, setNumber] = useState(0)
 
+    // Create a function using () =>
+    // THis function is called incrementNumber
+    //It will set the number to number+1 // number = number+1, number++
+    const incrementNumber = () => setNumber(number+1)
+
   return (
     <div style={{padding:'1.5rem', backgroundColor:'yellow'}}>
         <h1>Hello World</h1>
@@ -23,6 +28,9 @@ const Main = () => {
         <hr/>
         <h2>Counter</h2>
         <h4>{number}</h4>
+        <button onClick={incrementNumber}>Increment number</button>
+        <button onClick={decrementNumber}>Decrement number</button>
+        <button onClick={reset}>Reset to Zero</button>
     </div>
     
   )
