@@ -13,6 +13,12 @@ const Main = () => {
     //It will set the number to number+1 // number = number+1, number++
     const incrementNumber = () => setNumber(number+1)
 
+    const decrementNumber = () =>setNumber(number-1)
+
+    const reset = () => setNumber(0)
+
+    
+
   return (
     <div style={{padding:'1.5rem', backgroundColor:'yellow'}}>
         <h1>Hello World</h1>
