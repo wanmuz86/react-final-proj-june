@@ -1,7 +1,15 @@
 .header {
   background-color: black;
   padding: 1.5em;
-  font-size: 2rem;
+  font-size: 3rem;
   text-align: center;
   color: aliceblue;
+}
+
+.footer {
+  background-color: darkslategray;
+  padding: 1.5em;
+  font-size: 1.2;
+  text-align: center;
+  color: antiquewhite;
 }
