@@ -48,6 +48,16 @@ const Main = () => {
         <hr />
         <h2>User Info</h2>
         <UserInfo user={mainUser}/>
+
+        <hr/>
+        
+        <h2>Add User Form</h2>
+        <label htmlFor='userName'>User Name</label>
+        <input type="text" id='userName' placeholder='Enter user name'/>
+        <label htmlFor='userAge'>User Age</label>
+        <input type="text" id='userAge' placeholder='Enter user age' />
+        <button>Add User</button>
+
         <hr />
         <h2>Users information</h2>
         {
