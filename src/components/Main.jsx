@@ -10,7 +10,7 @@ const Main = () => {
         "age":25
     }
 
-    const users = [
+    const [users,setUsers] = useState([
         {
             "id":1,
             "name":"John Doe",
@@ -26,7 +26,7 @@ const Main = () => {
             "name":"Mark Jacob",
             "age":33
         }
-    ]
+    ])
 
     // 1 ) Create State to manage the input of the form
 
@@ -50,6 +50,20 @@ const Main = () => {
 
     const handleUserPressed = () => {
         console.log(userForm)
+        // Retrieving the last id in the users array
+        let currentId = users[users.length-1].id;
+
+        // Using spread operator  {...userForm, }
+        // I will add id to the userForm
+        // The value of id is currentId + 1
+        // Then I will add the modified userForm at the end of users array [...users, ] / push
+        // use setUsers to update the users state
+        setUsers([...users, {...userForm, id:currentId+1}])
+
+        // reset the form
+
+        setUserForm({"name":"", "age":0})
+        
     }
 
   return (
