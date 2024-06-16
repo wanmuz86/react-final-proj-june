@@ -1,13 +1,14 @@
 import React,{useState} from 'react'
 
 // Pass parameter into compoenent through props
-const Counter = (props) => {
+// These parameters are destructured using object destructured
+const Counter = ({initialValue,minValue}) => {
 
      // Create a variable/state number
     // The initial value of this variable/the state is 0 (getter)
     // When we want to update the variable/the state use setNumber method (setter)
 
-    const [number, setNumber] = useState(props.initialValue)
+    const [number, setNumber] = useState(initialValue)
     const [message,setMessage] = useState("")
 
     // Create a function using () =>
@@ -19,8 +20,8 @@ const Counter = (props) => {
     }
 
     const decrementNumber = () =>{
-        if (number == props.minValue) {
-            setMessage(`Number cannot be less than ${props.minValue}`)
+        if (number == minValue) {
+            setMessage(`Number cannot be less than ${minValue}`)
         } 
         else {
             setNumber(number-1)
