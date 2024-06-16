@@ -1,12 +1,13 @@
 import React,{useState} from 'react'
 
-const Counter = () => {
+// Pass parameter into compoenent through props
+const Counter = (props) => {
 
      // Create a variable/state number
     // The initial value of this variable/the state is 0 (getter)
     // When we want to update the variable/the state use setNumber method (setter)
 
-    const [number, setNumber] = useState(0)
+    const [number, setNumber] = useState(props.initialValue)
     const [message,setMessage] = useState("")
 
     // Create a function using () =>
@@ -34,7 +35,6 @@ const Counter = () => {
 
   return (
     <div>
-   
         <h4>{number}</h4>
         <p style={{color:'red'}}>{message}</p>
         <button onClick={incrementNumber}>Increment number</button>

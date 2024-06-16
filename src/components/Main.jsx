@@ -2,7 +2,6 @@ import React from 'react'
 import Counter from './Counter'
 const Main = () => {
 
-   
   return (
     <div style={{padding:'1.5rem', backgroundColor:'yellow'}}>
         <h1>Hello World</h1>
@@ -17,7 +16,9 @@ const Main = () => {
 
         <hr/>
         <h2>Counter</h2>
-        <Counter/>
+        <Counter initialValue={0}/>
+        <Counter initialValue={5}/>
+        <Counter initialValue={10}/>
         
     </div>
     
