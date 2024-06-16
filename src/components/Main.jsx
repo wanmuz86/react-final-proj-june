@@ -81,6 +81,11 @@ const Main = () => {
     const deleteUserPassed = (id) => {
         console.log(id);
 
+        // Filter
+        // Retrieve me all the users whose id is different than the deleted users
+        let filteredUsers = users.filter(val=> val.id !== id)
+        setUsers(filteredUsers);
+
     }
 
   return (
