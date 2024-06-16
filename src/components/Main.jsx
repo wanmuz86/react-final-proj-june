@@ -77,6 +77,11 @@ const Main = () => {
 
     }
 
+    const deleteUserPassed = (id) => {
+        console.log(id);
+
+    }
+
   return (
     <div style={{padding:'1.5rem', backgroundColor:'yellow'}}>
         <h1>Hello World</h1>
@@ -122,7 +127,9 @@ const Main = () => {
         <hr />
         <h2>Users information</h2>
         {
-            users.map(val=> <UserInfo user={val} key={val.id}/>)
+            // Inside the props, deleteUserPassed refer to the function defined inside Main.jsx
+            // deleteUser is prop passed to the child
+            users.map(val=> <UserInfo user={val} key={val.id} deleteUser={deleteUserPassed}/>)
         }
 
         

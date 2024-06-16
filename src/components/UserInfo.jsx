@@ -1,6 +1,17 @@
 import React from 'react'
 import '../App.css'
-const UserInfo = ({user}) => {
+const UserInfo = ({user,deleteUser}) => {
+
+    //The users is managed inside parent component. Main.jsx
+    // The action delete happens in child compoenent UserInfo.jsx
+    // Pass up / Lifting up through props the id of user needs to deleted
+
+    const handleDelete = () => {
+        // Call the props passed by the parent , pass the userId into the function
+        deleteUser(user.id)
+
+    }
+
   return (
     <div className='user-card'>
         <p>User Id : {user.id}</p>
@@ -17,6 +28,8 @@ const UserInfo = ({user}) => {
         {
             user.id == 1 && <p>Hello admin</p>
         }
+
+        <button onClick={handleDelete}>Delete user</button>
     </div>
   )
 }
