@@ -7,7 +7,7 @@ const UserInfo = ({user,deleteUser}) => {
     // Pass up / Lifting up through props the id of user needs to deleted
 
     const handleDelete = () => {
-        // Call the props passed by the parent , pass the userId into the function
+        // 3) Call the props passed by the parent , pass the userId into the function
         deleteUser(user.id)
 
     }
@@ -28,6 +28,7 @@ const UserInfo = ({user,deleteUser}) => {
         {
             user.id == 1 && <p>Hello admin</p>
         }
+        {/* 2 ) When the button is pressed call the handleDelete method */}
 
         <button onClick={handleDelete}>Delete user</button>
     </div>
