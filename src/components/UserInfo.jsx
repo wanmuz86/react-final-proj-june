@@ -1,8 +1,8 @@
 import React from 'react'
-
+import '../App.css'
 const UserInfo = ({user}) => {
   return (
-    <div>
+    <div className='user-card'>
         <p>User Id : {user.id}</p>
         <p>Name: {user.name}</p>
         <p>Age:{user.age}</p>
@@ -13,6 +13,9 @@ const UserInfo = ({user}) => {
             <p>Cannot enter website</p>
             :
             <p>Adult you may proceed</p>
+        }
+        {
+            user.id == 1 && <p>Hello admin</p>
         }
     </div>
   )
