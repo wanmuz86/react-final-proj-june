@@ -19,8 +19,8 @@ const Counter = (props) => {
     }
 
     const decrementNumber = () =>{
-        if (number == 0) {
-            setMessage("Number cannot be less than 0")
+        if (number == props.minValue) {
+            setMessage(`Number cannot be less than ${props.minValue}`)
         } 
         else {
             setNumber(number-1)

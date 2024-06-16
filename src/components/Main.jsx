@@ -16,9 +16,9 @@ const Main = () => {
 
         <hr/>
         <h2>Counter</h2>
-        <Counter initialValue={0}/>
-        <Counter initialValue={5}/>
-        <Counter initialValue={10}/>
+        <Counter initialValue={0} minValue={0}/>
+        <Counter initialValue={5} minValue={3}/>
+        <Counter initialValue={10} minValue={-5}/>
         
     </div>
     
