@@ -10,6 +10,24 @@ const Main = () => {
         "age":25
     }
 
+    const users = [
+        {
+            "id":1,
+            "name":"John Doe",
+            "age":25
+        },
+        {
+            "id":2,
+            "name":"Alice Lee",
+            "age":16
+        },
+        {
+            "id":3,
+            "name":"Mark Jacob",
+            "age":33
+        }
+    ]
+
   return (
     <div style={{padding:'1.5rem', backgroundColor:'yellow'}}>
         <h1>Hello World</h1>
@@ -30,6 +48,11 @@ const Main = () => {
         <hr />
         <h2>User Info</h2>
         <UserInfo user={mainUser}/>
+        <hr />
+        <h2>Users information</h2>
+        {
+            users.map(val=> <UserInfo user={val} key={val.id}/>)
+        }
 
         
     </div>
